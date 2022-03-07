@@ -200,4 +200,72 @@ button.btn-alt:hover {
 button:hover {
   background-color: #0EA5E9;
 }
+
+.menu {
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 1.25rem 0;
+}
+
+.menu a.active {
+  background-color: #F8FAFC;
+  border-radius: 6px;
+}
+
+.menu__profile {
+  background-image: url("../img/menu-profile.svg");
+}
+
+.menu__profile.active {
+  background-image: url("../img/menu-profile-selected.svg");
+}
+
+.menu__exercises {
+  background-image: url("../img/menu-list.svg");
+}
+
+.menu__exercises.active {
+  background-image: url("../img/menu-list-selected.svg");
+}
+
+.menu__calendar {
+  background-image: url("../img/menu-calendar.svg");
+}
+
+.menu__calendar.active {
+  background-image: url("../img/menu-calendar-selected.svg");
+}
+
+.menu__add_form {
+  background-image: url("../img/menu-add.svg");
+}
+
+.menu__add_form.active {
+  background-image: url("../img/menu-add-selected.svg");
+}
+
+.menu__settings {
+  background-image: url("../img/menu-settings.svg");
+  position: absolute;
+  bottom: 15px;
+}
+
+.menu__settings.active {
+  background-image: url("../img/menu-settings-selected.svg");
+}
 /*# sourceMappingURL=style.css.map */

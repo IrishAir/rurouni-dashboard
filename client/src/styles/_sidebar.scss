@@ -1,0 +1,59 @@
+.menu {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 1.25rem 0;
+
+    &.active {
+      background-color: $slate-white-bg;
+      border-radius: 6px;
+    }
+  }
+
+  &__profile {
+    background-image: url('../img/menu-profile.svg');
+
+    &.active {
+      background-image: url('../img/menu-profile-selected.svg');
+    }
+  }
+  &__exercises {
+    background-image: url('../img/menu-list.svg');
+
+    &.active {
+      background-image: url('../img/menu-list-selected.svg');
+    }  
+  }
+  &__calendar {
+    background-image: url('../img/menu-calendar.svg');
+
+    &.active {
+      background-image: url('../img/menu-calendar-selected.svg');
+    }
+  }
+  &__add_form {
+    background-image: url('../img/menu-add.svg');
+
+    &.active {
+      background-image: url('../img/menu-add-selected.svg');
+    }
+  }
+  &__settings {
+    background-image: url('../img/menu-settings.svg');
+    position: absolute;
+    bottom: 15px;
+
+    &.active {
+      background-image: url('../img/menu-settings-selected.svg');
+    }
+  }
+}
