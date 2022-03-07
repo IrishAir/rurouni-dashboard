@@ -268,4 +268,35 @@ button:hover {
 .menu__settings.active {
   background-image: url("../img/menu-settings-selected.svg");
 }
+
+.profile-page .dashboard-area {
+  height: 13.125rem;
+}
+
+.profile-page .profile-workout-plan .links {
+  -webkit-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+}
+
+.profile-page .profile-workout-plan .links li {
+  margin-bottom: 1.875rem;
+}
+
+.profile-page .profile-workout-plan .links li:last-child {
+  margin-bottom: 0;
+}
+
+.profile-page .profile-workout-plan .links li p {
+  color: #334155;
+}
+
+.profile-page .profile-workout-plan .links li span {
+  padding-right: 0.3rem;
+}
+
+.profile-page .profile-workout-plan .links li:nth-child(4) {
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

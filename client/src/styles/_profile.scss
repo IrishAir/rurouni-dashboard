@@ -1,0 +1,35 @@
+.profile-page {
+
+  .dashboard-area{
+    height: 13.125rem;
+
+  }
+
+  .profile-workout-plan {
+
+    .links {
+      columns: 2;
+      column-gap: 2.5rem;
+
+      li {
+        margin-bottom: 1.875rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        p {
+          color: $font-header;
+        }
+
+        span {
+          padding-right: 0.3rem;
+        }
+      }
+
+      li:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

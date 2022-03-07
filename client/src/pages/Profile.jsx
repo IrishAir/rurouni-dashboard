@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ProfileStats from '../components/ProfileStats';
+import ProfileDashboard from '../components/ProfileDashboard';
+import WorkoutPlan from '../components/WorkoutPlan';
 
 export default function Profile() {
+
+  const [records, setRecords] = useState([]);
+
+  const getRecords = async () => {
+    try {
+      const response = await fetch("http://localhost:5000");
+      const jsonData = await response.json();
+
+      setRecords(jsonData);
+    } catch (err) {
+      console.error(err.message);     
+    }
+  }
+
+  useEffect(() => {
+    getRecords();
+  }, []);
+
   return (
-    <div>Profile</div>
+    <div className="profile-page">
+      <h1>Информация о тренировках</h1>
+      <div className="dashboard-area card">
+        <ProfileDashboard />
+      </div>
+      <ProfileStats data={records} />
+      <WorkoutPlan />
+    </div>
   )
 }
