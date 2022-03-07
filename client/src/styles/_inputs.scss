@@ -1,0 +1,36 @@
+input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  transition: $animation;
+  font-family: 'Inter', sans-serif;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  color: $white;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Inter";
+  background-color: $blue;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  border: none;
+  transition: $animation;
+  
+  &.btn-alt {
+    background-color: $green;
+
+    &:hover {
+      background-color: darken($green, 12%);
+    }
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+}

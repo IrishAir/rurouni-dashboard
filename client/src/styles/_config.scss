@@ -1,0 +1,169 @@
+// Global Settings
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+$animation: ease-in-out 300ms;
+
+$shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+// Colors
+$slate-white-bg: #F8FAFC;
+$slate-meny-bg: #334155;
+$font-header: #334155;
+$font-gray: #64748B;
+$green: #4ADE80;
+$dark-gray: #94A3B8;
+$light-gray: #64748B;
+$font-dark-gray: #475569;
+$blue: #38BDF8;
+$blue-hover: #0EA5E9;
+$slate-row: #F1F5F9;
+$white: #fff;
+
+// Typography
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  &.regular {
+    font-weight: 400;
+    color: $font-dark-gray;
+  }
+}
+
+h1, h2, h3 {
+  color: $font-header;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1.875rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+
+  &.light {
+    font-weight: 300;
+  }
+
+  &.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $font-header;
+  }
+
+  &.semi {
+    font-size: 1.5rem;
+    color: $font-header;
+    font-weight: 500;
+  }
+
+  &.description {
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $blue;
+  transition: $animation;
+  
+  &:hover {
+    color: $blue-hover;
+  }
+}
+
+// Structure
+.flex {
+  display: flex;
+}
+
+.cols {
+  flex-direction: column;
+}
+ 
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 5rem;
+  height: 100vh;
+  background-color: $slate-meny-bg;
+}
+
+.main-window {
+  height: 100vh;
+  width: 100vw;
+  background-color: $slate-white-bg;
+}
+
+.container {
+  padding: 2.812rem 3.437rem;// //45px 55px
+
+  @media (max-width: 1366px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.mb {
+  margin-bottom: 1.875rem;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+//Components
+.card {
+  padding: 1.875rem 3rem; //30px 48px;
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: 12px;
+  margin-bottom: 1.875rem;
+
+  @media (max-width: 1366px) {
+    padding: 1rem;
+  }
+}
+
+.card-info {
+  padding-left: 1.25rem;
+}
+
+.card-lable {
+  color: $font-gray;
+}
