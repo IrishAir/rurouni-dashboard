@@ -1,0 +1,26 @@
+.calendar-page {
+
+  .calendar-block {
+    padding-top: 2.1875rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 45rem;
+  }
+
+  .workout-list {
+    width: 50%;
+    color: $font-header;
+
+    &__item {
+      // padding: 0.9375rem 1.875rem;
+      padding: 1.2rem 1.875rem;
+      border-radius: 12px;
+      gap: 8rem;
+
+      &:nth-child(odd) {
+        background-color: $slate-row;
+      }
+    }
+  }
+}

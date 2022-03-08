@@ -385,4 +385,30 @@ button:hover {
   overflow-y: scroll;
   max-height: 37.5rem;
 }
+
+.calendar-page .calendar-block {
+  padding-top: 2.1875rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 45rem;
+}
+
+.calendar-page .workout-list {
+  width: 50%;
+  color: #334155;
+}
+
+.calendar-page .workout-list__item {
+  padding: 1.2rem 1.875rem;
+  border-radius: 12px;
+  gap: 8rem;
+}
+
+.calendar-page .workout-list__item:nth-child(odd) {
+  background-color: #F1F5F9;
+}
 /*# sourceMappingURL=style.css.map */
