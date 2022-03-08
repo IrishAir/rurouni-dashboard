@@ -10,6 +10,34 @@ input {
   }
 }
 
+.search {
+  position: relative;
+  border-bottom: 1px solid $dark-gray;
+  font-size: 1rem;
+  color: $light-gray;
+  padding: 0 0 0.625rem 1.875rem;
+  background-image: url('../img/search.svg');
+  background-repeat: no-repeat;
+
+  &:focus {
+    border-bottom: 1px solid $light-gray;
+    background-image: url('../img/search-focus.svg');
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark-gray;
+  border-radius: 12px;
+}
+
 button {
   cursor: pointer;
   color: $white;

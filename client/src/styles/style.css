@@ -175,6 +175,34 @@ input:focus {
   outline: none;
 }
 
+.search {
+  position: relative;
+  border-bottom: 1px solid #94A3B8;
+  font-size: 1rem;
+  color: #64748B;
+  padding: 0 0 0.625rem 1.875rem;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+}
+
+.search:focus {
+  border-bottom: 1px solid #64748B;
+  background-image: url("../img/search-focus.svg");
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 12px;
+}
+
 button {
   cursor: pointer;
   color: #fff;
@@ -298,5 +326,63 @@ button:hover {
 
 .profile-page .profile-workout-plan .links li:nth-child(4) {
   margin-bottom: 0;
+}
+
+.exercises-page h3 {
+  color: #475569;
+}
+
+.exercises-page__block {
+  padding-top: 2.1875rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.exercises-page__item {
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.exercises-page__item:hover {
+  background-color: #eaedf1;
+}
+
+.exercises-page .exercises-search-area {
+  width: 50%;
+  margin-bottom: 2.5rem;
+}
+
+.exercises-page .tag-area {
+  gap: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.exercises-page .tag-area__item {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  gap: 0.3125rem;
+}
+
+.exercises-page .tag-area__item p {
+  color: #64748B;
+}
+
+.exercises-page .exercises-result-area {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  overflow-y: scroll;
+  max-height: 37.5rem;
 }
 /*# sourceMappingURL=style.css.map */
