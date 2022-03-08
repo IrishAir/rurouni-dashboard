@@ -1,0 +1,26 @@
+.addform-page {
+
+  &__header {
+    padding-bottom: 3.75rem;
+    gap: 5rem;
+  }
+
+  &__body {
+    .form { 
+      gap: 5rem;
+      margin-bottom: 3rem;
+
+      &__item {
+        display: grid;
+        padding-bottom: 1.875rem;
+        gap: 1.5rem;
+        grid-template-columns: 2fr 0.5fr;       
+      }
+    }
+
+    .btn-block {
+      gap: 1.5rem;
+      justify-content: center;
+    }
+  }
+}
