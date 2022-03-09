@@ -175,6 +175,18 @@ input:focus {
   outline: none;
 }
 
+.input {
+  padding: 0.6rem 0.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+.input:focus, .input:hover {
+  border: 1px solid #adadad;
+}
+
 .search {
   position: relative;
   border-bottom: 1px solid #94A3B8;
@@ -386,6 +398,35 @@ button:hover {
   max-height: 37.5rem;
 }
 
+.exercise-page .exercise-search-area {
+  width: 20%;
+  margin: 1rem auto 0;
+}
+
+.exercise-page .exercise-page-chart {
+  height: 36rem;
+}
+
+.exercise-page .exercise-page-chart .chart-tooltip {
+  padding: 2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid #F1F5F9;
+  color: #334155;
+}
+
+.exercise-page .exercise-page-chart .chart-tooltip p {
+  padding-bottom: 0.7rem;
+}
+
+.exercise-page .exercise-page-chart .chart-tooltip span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #4ADE80;
+}
+
 .calendar-page .calendar-block {
   padding-top: 2.1875rem;
   -webkit-box-pack: center;
@@ -410,5 +451,31 @@ button:hover {
 
 .calendar-page .workout-list__item:nth-child(odd) {
   background-color: #F1F5F9;
+}
+
+.addform-page__header {
+  padding-bottom: 3.75rem;
+  gap: 5rem;
+}
+
+.addform-page__body .form {
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.addform-page__body .form__item {
+  display: -ms-grid;
+  display: grid;
+  padding-bottom: 1.875rem;
+  gap: 1.5rem;
+  -ms-grid-columns: 2fr 0.5fr;
+      grid-template-columns: 2fr 0.5fr;
+}
+
+.addform-page__body .btn-block {
+  gap: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
