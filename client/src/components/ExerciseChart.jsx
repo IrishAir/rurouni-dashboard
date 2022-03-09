@@ -28,8 +28,8 @@ export default function ExerciseChart(props) {
   )
 }
 
-function CustomTooltip({active, payload}) {
-  if (active) {
+const CustomTooltip = ({active, payload}) => {
+  if (active && payload && payload.length) {
     return (
       <div className='chart-tooltip'>
         <p>Вес на момент тренировки:</p>
