@@ -45,7 +45,7 @@ export default function Exercise() {
       />
       <div className="exercise-page-chart card">
         <h3>Изменение веса</h3>
-        <ExerciseChart />
+        <ExerciseChart data={exercise.history} />
       </div>
     </div>
   )
