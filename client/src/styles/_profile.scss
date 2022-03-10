@@ -3,23 +3,26 @@
   .dashboard-area{
     height: 13.125rem;
 
+    @media (max-width: 1366px) {
+      max-width: 77.5rem;
+      margin-bottom: 6rem;
+    }
   }
 
   .profile-workout-plan {
+    @media (max-width: 1366px) {
+      visibility: hidden;
+    }
 
     .links {
       columns: 2;
       column-gap: 2.5rem;
 
-      li {
+      .link {
         margin-bottom: 1.875rem;
 
         &:last-child {
           margin-bottom: 0;
-        }
-
-        p {
-          color: $font-header;
         }
 
         span {
@@ -27,7 +30,7 @@
         }
       }
 
-      li:nth-child(4) {
+      .link:nth-child(4) {
         margin-bottom: 0;
       }
     }
