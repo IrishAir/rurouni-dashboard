@@ -9,10 +9,10 @@ export default function CalendarList(props) {
         {props.workoutList.sort((a, b) => a.day > b.day  ? -1 : 1).map(item =>
             <div className='workout-list__item flex jcsb'>
               <div className='workout-list__col'>
-                <p className='light workout-list__date'>{format(parseISO(item.day), "d MMMM, EEEE", { locale: ru })}</p>
+                <p className='light'>{format(parseISO(item.day), "d MMMM, EEEE", { locale: ru })}</p>
               </div>
               <div className='workout-list__col'>
-                <p className='light workout-list__name'>{item.title}</p>
+                <p className='light'>{item.title}</p>
               </div>
             </div>
             )}

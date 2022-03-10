@@ -23,7 +23,7 @@ export default function Calendar() {
   return (
     <div className="calendar-page">
       <h1>Календарь тренировок</h1>
-      <div className="calendar-page__wrapper">
+      <div>
         <CalendarList workoutList={records}/>
       </div>
     </div>
