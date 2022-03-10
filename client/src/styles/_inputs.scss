@@ -10,6 +10,47 @@ input {
   }
 }
 
+.weight-input {
+  position: relative;
+}
+
+.date-input {
+  position: relative;
+
+  .date-icon {
+    transition: $animation;
+    position: absolute;
+    right: -0.3rem;
+    top: 0.6rem;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/menu-calendar.svg');
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    .date-icon {
+      background-image: url('../img/menu-calendar-selected.svg');      
+    }
+  }
+}
+
+.date-input *{
+  font-weight: 300;
+  font-size: 1rem;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: -1.2rem;
+  color: $font-dark-gray;
+
+  @media (max-width: 1366px) {
+    display: none;
+  }
+}
+
 .input {
   padding: 0.6rem 0.5rem;
   font-weight: 300;
@@ -74,3 +115,39 @@ button {
     background-color: $blue-hover;
   }
 }
+
+.modal-container {
+  height: 100%;
+  width: 100%;
+  justify-content:center;
+  align-items:center;
+
+  .modal {
+    width: 37.5rem;
+    height: 21.875rem;
+    background-image: url('../img/modal-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: $animation;
+
+    &__img {
+      display: inline-block;
+      width: 7.5rem;
+      height: 5.625rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+      &--success {
+        background-image: url('../img/validate.svg');
+      }
+      &--failure {
+        background-image: url('../img/failure.svg');
+      }
+    }
+  }
+}
+
