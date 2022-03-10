@@ -24,7 +24,7 @@ export default function ExerciseStats(props) {
         src={volume} 
         alt='Последняя тренировка' 
         lable='Последняя тренировка'
-        title={`${props.weeklyVolume}`}
+        title={`${props.lastTrained}`}
       />
       <StatCard 
         src={quantity} 

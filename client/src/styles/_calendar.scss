@@ -5,22 +5,29 @@
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: scroll;
-    max-height: 45rem;
-  }
+    height: 45rem;
+
+    @media (max-width: 1366px) {
+      height: 30rem;
+    }
 
   .workout-list {
     width: 50%;
     color: $font-header;
 
     &__item {
-      // padding: 0.9375rem 1.875rem;
       padding: 1.2rem 1.875rem;
       border-radius: 12px;
       gap: 8rem;
+
+      @media (max-width: 1366px) {
+        gap: 1rem;
+      }
 
       &:nth-child(odd) {
         background-color: $slate-row;
       }
     }
   }
+}
 }

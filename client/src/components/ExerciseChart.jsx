@@ -20,7 +20,8 @@ export default function ExerciseChart(props) {
             }
               return "";}} />
         <YAxis stroke="94A3B8" tickCount={8} dx={-15} tickSize={10} type="number"
-          domain={[0, 'dataMax + 45']} tick={{ fill: '#94A3B8', fontSize: 12 }} /> 
+          domain={["dataMin - 10", "dataMax + 10"]} 
+          tick={{ fill: '#94A3B8', fontSize: 12 }} /> 
         <Tooltip content={<CustomTooltip />}/>
         <Line type="monotone" activeDot={{ fill: '#49C576', r: 6 }} dataKey="weight" stroke="#4ADE80" strokeWidth='2' />
       </LineChart>

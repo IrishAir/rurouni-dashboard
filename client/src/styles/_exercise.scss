@@ -1,13 +1,12 @@
 .exercise-page {
 
-  .exercise-search-area {
-    //margin-top: 1rem;
-    width: 20%;
-    margin: 1rem auto 0;
-  }
-
   .exercise-page-chart{
     height: 36rem;
+
+    @media (max-width: 1366px) {
+      height: 22rem;
+      max-width: 77.5rem;
+    }
 
     .chart-tooltip {
       padding: 2rem;
