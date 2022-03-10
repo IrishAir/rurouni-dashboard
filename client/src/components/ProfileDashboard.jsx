@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveCalendar } from '@nivo/calendar'
 import { BasicTooltip } from '@nivo/tooltip';
-import {format, parseISO} from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { ru } from 'date-fns/locale';
 
 export default function ProfileDashboard(props) {
@@ -28,7 +28,6 @@ export default function ProfileDashboard(props) {
         'Дек',
     ];
 
-
     const CalTooltip = (props) => {
       return (
           <BasicTooltip
@@ -40,11 +39,13 @@ export default function ProfileDashboard(props) {
       );
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <ResponsiveCalendar
     data={props.data}
-    from="2022-01-01"
-    to="2022-12-31"
+    from={`${currentYear}-01-01`}
+    to={`${currentYear}-12-31`}
     emptyColor=  '#F1F5F9' //"rgba(0,0,0,0.0)"
     pixelRatio={20}
     colors={[ '#4ADE80', '#4ADE80', '#4ADE80', '#a5efc0' ]}
