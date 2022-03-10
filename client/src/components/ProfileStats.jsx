@@ -1,4 +1,6 @@
 import React from 'react';
+import {format, parseISO} from 'date-fns';
+import { ru } from 'date-fns/locale';
 import StatCard from './StatCard';
 import bicep from '../img/bicep.png';
 import cardio from '../img/cardio.png';
@@ -20,7 +22,7 @@ export default function ProfileStats(props) {
   const progressCounter = workoutsCounter / 313 * 100; //52 sundays
 
   return (
-    <div className="profile-stats jcsb flex">
+    <div className="jcsb flex">
       <StatCard 
         src={bicep} 
         alt='Силовых тренировок' 
@@ -37,13 +39,13 @@ export default function ProfileStats(props) {
         src={progress} 
         alt='Общий прогресс' 
         lable='Общий прогресс'
-        title={`${Math.ceil(progressCounter)} %`}
+        title={`${Math.ceil(progressCounter)}%`}
       />
       <StatCard 
         src={lastVisit} 
         alt='Последнее посещение' 
         lable='Последнее посещение'
-        title={lastWorkoutDate}
+        title={lastWorkoutDate ? format(parseISO(lastWorkoutDate), "d MMMM yyyy", { locale: ru }) : lastWorkoutDate}
       />
     </div>
   )
