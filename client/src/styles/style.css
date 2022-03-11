@@ -175,6 +175,59 @@ input:focus {
   outline: none;
 }
 
+.password {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #64748B;
+  height: 3rem;
+  padding-left: 3.2rem;
+  letter-spacing: 3.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.weight-input {
+  position: relative;
+}
+
+.date-input {
+  position: relative;
+}
+
+.date-input .date-icon {
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+  position: absolute;
+  right: -0.3rem;
+  top: 0.6rem;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/menu-calendar.svg");
+  background-repeat: no-repeat;
+}
+
+.date-input:hover .date-icon {
+  background-image: url("../img/menu-calendar-selected.svg");
+}
+
+.date-input * {
+  font-weight: 300;
+  font-size: 1rem;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: -1.2rem;
+  color: #475569;
+}
+
+@media (max-width: 1366px) {
+  label {
+    display: none;
+  }
+}
+
 .input {
   padding: 0.6rem 0.5rem;
   font-weight: 300;
@@ -239,6 +292,51 @@ button.btn-alt:hover {
 
 button:hover {
   background-color: #0EA5E9;
+}
+
+.modal-container {
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container .modal {
+  width: 37.5rem;
+  height: 21.875rem;
+  background-image: url("../img/modal-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.modal-container .modal__img {
+  display: inline-block;
+  width: 7.5rem;
+  height: 5.625rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-container .modal__img--success {
+  background-image: url("../img/validate.svg");
+}
+
+.modal-container .modal__img--failure {
+  background-image: url("../img/failure.svg");
 }
 
 .menu {
@@ -313,6 +411,19 @@ button:hover {
   height: 13.125rem;
 }
 
+@media (max-width: 1366px) {
+  .profile-page .dashboard-area {
+    max-width: 77.5rem;
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .profile-page .profile-workout-plan {
+    visibility: hidden;
+  }
+}
+
 .profile-page .profile-workout-plan .links {
   -webkit-columns: 2;
           columns: 2;
@@ -320,23 +431,19 @@ button:hover {
           column-gap: 2.5rem;
 }
 
-.profile-page .profile-workout-plan .links li {
+.profile-page .profile-workout-plan .links .link {
   margin-bottom: 1.875rem;
 }
 
-.profile-page .profile-workout-plan .links li:last-child {
+.profile-page .profile-workout-plan .links .link:last-child {
   margin-bottom: 0;
 }
 
-.profile-page .profile-workout-plan .links li p {
-  color: #334155;
-}
-
-.profile-page .profile-workout-plan .links li span {
+.profile-page .profile-workout-plan .links .link span {
   padding-right: 0.3rem;
 }
 
-.profile-page .profile-workout-plan .links li:nth-child(4) {
+.profile-page .profile-workout-plan .links .link:nth-child(4) {
   margin-bottom: 0;
 }
 
@@ -395,16 +502,24 @@ button:hover {
           justify-content: center;
   gap: 1rem;
   overflow-y: scroll;
-  max-height: 37.5rem;
+  height: 37.5rem;
 }
 
-.exercise-page .exercise-search-area {
-  width: 20%;
-  margin: 1rem auto 0;
+@media (max-width: 1366px) {
+  .exercises-page .exercises-result-area {
+    height: 22rem;
+  }
 }
 
 .exercise-page .exercise-page-chart {
   height: 36rem;
+}
+
+@media (max-width: 1366px) {
+  .exercise-page .exercise-page-chart {
+    height: 22rem;
+    max-width: 77.5rem;
+  }
 }
 
 .exercise-page .exercise-page-chart .chart-tooltip {
@@ -435,41 +550,86 @@ button:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-y: scroll;
-  max-height: 45rem;
+  height: 45rem;
 }
 
-.calendar-page .workout-list {
+@media (max-width: 1366px) {
+  .calendar-page .calendar-block {
+    height: 30rem;
+  }
+}
+
+.calendar-page .calendar-block .workout-list {
   width: 50%;
   color: #334155;
 }
 
-.calendar-page .workout-list__item {
+.calendar-page .calendar-block .workout-list__item {
   padding: 1.2rem 1.875rem;
   border-radius: 12px;
   gap: 8rem;
 }
 
-.calendar-page .workout-list__item:nth-child(odd) {
+@media (max-width: 1366px) {
+  .calendar-page .calendar-block .workout-list__item {
+    gap: 1rem;
+  }
+}
+
+.calendar-page .calendar-block .workout-list__item:nth-child(odd) {
   background-color: #F1F5F9;
 }
 
+.addform-page .form-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1366px) {
+  .addform-page .form-container {
+    width: 95%;
+  }
+}
+
 .addform-page__header {
-  padding-bottom: 3.75rem;
-  gap: 5rem;
+  padding-bottom: 2rem;
+  gap: 4rem;
+}
+
+@media (max-width: 1366px) {
+  .addform-page__header {
+    padding-bottom: 1.5rem;
+    gap: 2rem;
+  }
 }
 
 .addform-page__body .form {
   gap: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1366px) {
+  .addform-page__body .form {
+    gap: 3rem;
+  }
 }
 
 .addform-page__body .form__item {
   display: -ms-grid;
   display: grid;
-  padding-bottom: 1.875rem;
+  padding-bottom: 3rem;
   gap: 1.5rem;
   -ms-grid-columns: 2fr 0.5fr;
       grid-template-columns: 2fr 0.5fr;
+}
+
+@media (max-width: 1366px) {
+  .addform-page__body .form__item {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .addform-page__body .btn-block {
@@ -477,5 +637,15 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.auth-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

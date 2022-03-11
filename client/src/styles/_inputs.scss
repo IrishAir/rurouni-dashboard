@@ -10,6 +10,17 @@ input {
   }
 }
 
+.password {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $font-gray;
+  height: 3rem;
+  padding-left: 3.2rem;
+  letter-spacing: 3.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .weight-input {
   position: relative;
 }
