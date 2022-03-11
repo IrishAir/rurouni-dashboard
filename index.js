@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.use("/login", require("./routes/jwtAuth"));
+
 if(process.env.NODE_ENV === "production") {
   // server static content
   // npm run build
