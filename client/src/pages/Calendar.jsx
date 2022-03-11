@@ -7,7 +7,7 @@ export default function Calendar() {
 
   const getRecords = async () => {
     try {
-      const response = await fetch("http://localhost:5000/calendar");
+      const response = await fetch("/calendar");
       const jsonData = await response.json();
 
       setRecords(jsonData);

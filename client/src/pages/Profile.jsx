@@ -9,7 +9,7 @@ export default function Profile() {
 
   const getRecords = async () => {
     try {
-      const response = await fetch("http://localhost:5000");
+      const response = await fetch("/calendar");
       const jsonData = await response.json();
 
       setRecords(jsonData);

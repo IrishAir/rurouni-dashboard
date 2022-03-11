@@ -9,7 +9,7 @@ export default function Exercises() {
   
   const getExercises = async () => {
     try {
-      const response = await fetch("http://localhost:5000/exercises");
+      const response = await fetch("/exercises");
       const jsonData = await response.json();
 
       setExercises(jsonData);
