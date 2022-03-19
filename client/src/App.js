@@ -12,7 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("/login", {
+      const res = await fetch("https://rurouni-dashboard.herokuapp.com/login", {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });

@@ -7,7 +7,7 @@ export default function Calendar() {
 
   const getRecords = async () => {
     try {
-      const response = await fetch("/calendar");
+      const response = await fetch("https://rurouni-dashboard.herokuapp.com/calendar");
       const jsonData = await response.json();
 
       setRecords(jsonData);

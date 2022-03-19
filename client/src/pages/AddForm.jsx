@@ -44,7 +44,7 @@ export default function AddForm() {
   const [exercises, setExercises] = useState([]);
   const getExercises = async () => {
     try {
-      const response = await fetch("/exercises");
+      const response = await fetch("https://rurouni-dashboard.herokuapp.com/exercises");
       const jsonData = await response.json();
       setExercises(jsonData);
     } catch (err) {
@@ -68,7 +68,7 @@ export default function AddForm() {
                        [sixthId, sixthWeight],
                        [seventhId, seventhWeight],
                        [eigthId, eigthWeight],]};
-      const response = await fetch('http://localhost:5000/add_form', {
+      const response = await fetch('https://rurouni-dashboard.herokuapp.com/add_form', {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
