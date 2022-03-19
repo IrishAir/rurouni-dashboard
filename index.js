@@ -12,8 +12,6 @@ app.use(express.json());
 app.use("/login", require("./routes/jwtAuth"));
 
 if(process.env.NODE_ENV === "production") {
-  // server static content
-  // npm run build
   app.use(express.static(path.join(__dirname, 'client/build')))
 }
 

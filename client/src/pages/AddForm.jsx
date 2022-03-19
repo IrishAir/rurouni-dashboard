@@ -68,13 +68,11 @@ export default function AddForm() {
                        [sixthId, sixthWeight],
                        [seventhId, seventhWeight],
                        [eigthId, eigthWeight],]};
-      console.log(body);
       const response = await fetch('http://localhost:5000/add_form', {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
       });
-      console.log(response);
     } catch (err) {
       console.error(err.message);    
     }
