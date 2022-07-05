@@ -12,8 +12,6 @@ app.use(express.json());
 app.use("/login", require("./routes/jwtAuth"));
 
 if(process.env.NODE_ENV === "production") {
-  // server static content
-  // npm run build
   app.use(express.static(path.join(__dirname, 'client/build')))
 }
 
@@ -62,10 +60,10 @@ app.post('/add_form', async (req, res) => {
  
 // update exercises weights
   try {
-    const { exercises } = req.body;  
-    exercises.map(async (exercise) => {
+    const { exercisesStore } = req.body;  
+    exercisesStore.map(async (exercise) => {
       const newValues = await pool.query(
-        "UPDATE exercise SET weight = $1 WHERE id = $2 RETURNING *", [exercise[1], exercise[0]]);     
+        "UPDATE exercise SET weight = $1 WHERE id = $2 RETURNING *", [exercise.weight, exercise.id]);     
       res.json(newValues.rows[0]);})
     } catch (err) {
     console.error(err.message);
@@ -82,11 +80,11 @@ app.post('/add_form', async (req, res) => {
    
 //update exercises history
   try {
-    const { date, exercises } = req.body;  
-    exercises.map(async (exercise) => {
+    const { date, exercisesStore } = req.body;  
+    exercisesStore.map(async (exercise) => {
       const newValues = await pool.query(
         `UPDATE exercise
-        SET history = history::jsonb || '{"date": "${date}", "weight": ${exercise[1]}}'::jsonb
+        SET history = history::jsonb || '{"date": "${date}", "weight": ${exercise.weight}}'::jsonb
         WHERE id = ${exercise[0]}`);     
       res.json(newValues.rows[0]);})
     } catch (err) {
