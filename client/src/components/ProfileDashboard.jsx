@@ -31,7 +31,7 @@ export default function ProfileDashboard({ records }) {
     const CalTooltip = (records) => {
       return (
           <BasicTooltip
-              id={records.data.title}
+              id={records.title}
               value={format(parseISO(records.day), "d MMM", { locale: ru })}
               color={records.color}
               enableChip
