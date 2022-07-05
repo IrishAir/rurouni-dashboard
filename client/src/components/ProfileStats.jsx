@@ -7,19 +7,19 @@ import cardio from '../img/cardio.png';
 import progress from '../img/progress.png';
 import lastVisit from '../img/last-visit.png';
 
-export default function ProfileStats(props) {
+export default function ProfileStats({ records }) {
   
-  const cardioCount = props.data.filter(function(item) {
+  const cardioCount = records.data.filter(function(item) {
     return item.value > 1;
   });
 
-  const weightCount = props.data.filter(function(item) {
+  const weightCount = records.data.filter(function(item) {
     return item.value <= 1;
   });
   
-  const workoutsCounter = props.data.length;
-  const lastWorkoutDate = props.data?.sort((a, b) => a.day < b.day  ? -1 : 1).at(-1)?.day;
-  const progressCounter = workoutsCounter / 313 * 100; //52 sundays
+  const workoutsCounter = records.data.length;
+  const lastWorkoutDate = records.data?.sort((a, b) => a.day < b.day  ? -1 : 1).at(-1)?.day;
+  const progressCounter = workoutsCounter / 313 * 100;
 
   return (
     <div className="jcsb flex">

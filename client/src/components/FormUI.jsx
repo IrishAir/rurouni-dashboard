@@ -70,17 +70,13 @@ function FormUI() {
 				<div className='addform-page__header flex'>
 					<TitleInput
 						title={title}
-						setTitle={setTitle}
-						name='title'
-						onChange={setTitle}
+						handleChange={setTitle}
 					/>
 					<DateInput
 						date={date}
-						name='date'
-						onChange={setDate}
 						startDate={startDate}
-						setStartDate={setStartDate}
-						setDate={setDate}
+						handleStartDate={setStartDate}
+						handleChange={setDate}
 					/>
 				</div>
 				<div className='addform-page__body'>
@@ -140,14 +136,20 @@ function FormUI() {
 						</div>
 					</div>
 					<div className='btn-block flex'>
-						<button onClick={() => setToggleModal(true)}>Добавить в дневник тренировок </button>
-						<button className='btn-alt' onClick={() => {
+						<button onClick={() => setToggleModal(true)}>
+							Добавить в дневник тренировок{' '}
+						</button>
+						<button
+							className='btn-alt'
+							onClick={() => {
 								setTitle('Кардио');
 								setValue(2);
 								setDate(today);
-								setToggleModal(true);}}
-                >Сегодня было кардио 
-            </button>
+								setToggleModal(true);
+							}}
+						>
+							Сегодня было кардио
+						</button>
 					</div>
 				</div>
 				<Modal
@@ -160,7 +162,8 @@ function FormUI() {
 							backgroundColor: 'rgba(000, 000, 000, 0.0)',
 							border: 'none',
 						},
-					}}>
+					}}
+				>
 					<div className='modal-container flex'>
 						<div className='modal flex cols'>
 							<div className='modal__img modal__img--success'></div>
@@ -168,8 +171,10 @@ function FormUI() {
 							<button
 								onClick={() => {
 									setToggleModal(false);
-									resetForm();}}
-							>Закрыть
+									resetForm();
+								}}
+							>
+								Закрыть
 							</button>
 						</div>
 					</div>

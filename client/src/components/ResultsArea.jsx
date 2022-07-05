@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ExerciseCard from './ExerciseCard';
 
-export default function SearchArea(props) {
+export default function SearchArea({ result, exercises }) {
   return (
     <div className="exercises-result-area flex jcsp">      
-      {props.exercises.filter((exercise) => {
-        if (props.result === '' ) {
+      {exercises.filter((exercise) => {
+        if (result === '' ) {
           return exercise;
-        } else if (exercise.name.toLowerCase().includes(props.result.toLowerCase())){
+        } else if (exercise.name.toLowerCase().includes(result.toLowerCase())){
           return exercise;
         }
       }).map(exercise => (

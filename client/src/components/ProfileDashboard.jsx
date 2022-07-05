@@ -4,7 +4,7 @@ import { BasicTooltip } from '@nivo/tooltip';
 import { format, parseISO } from 'date-fns';
 import { ru } from 'date-fns/locale';
 
-export default function ProfileDashboard(props) {
+export default function ProfileDashboard({ records }) {
 
   const theme = {
     fontSize: 12,
@@ -28,12 +28,12 @@ export default function ProfileDashboard(props) {
         'Дек',
     ];
 
-    const CalTooltip = (props) => {
+    const CalTooltip = (records) => {
       return (
           <BasicTooltip
-              id={props.data.title}
-              value={format(parseISO(props.day), "d MMM", { locale: ru })}
-              color={props.color}
+              id={records.data.title}
+              value={format(parseISO(records.day), "d MMM", { locale: ru })}
+              color={records.color}
               enableChip
           />
       );
@@ -43,7 +43,7 @@ export default function ProfileDashboard(props) {
 
   return (
     <ResponsiveCalendar
-    data={props.data}
+    data={records.data}
     from={`${currentYear}-01-01`}
     to={`${currentYear}-12-31`}
     emptyColor=  '#F1F5F9' //"rgba(0,0,0,0.0)"

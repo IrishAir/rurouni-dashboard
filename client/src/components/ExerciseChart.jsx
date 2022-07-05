@@ -3,10 +3,10 @@ import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tool
 import {format, parseISO} from 'date-fns';
 import { ru } from 'date-fns/locale';
 
-export default function ExerciseChart(props) {
+export default function ExerciseChart({ data }) {
   return (
     <ResponsiveContainer>
-      <LineChart data={props.data} cursor="pointer" margin={{
+      <LineChart data={data} cursor="pointer" margin={{
         bottom: 70,
         right: 40,
         left: 20
