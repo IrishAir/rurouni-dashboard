@@ -7,7 +7,7 @@ import cardio from '../img/cardio.png';
 import progress from '../img/progress.png';
 import lastVisit from '../img/last-visit.png';
 
-export default function ProfileStats({ records }) {
+export default function DashboardStats({ records }) {
   
   const cardioCount = records.data.filter(function(item) {
     return item.value > 1;

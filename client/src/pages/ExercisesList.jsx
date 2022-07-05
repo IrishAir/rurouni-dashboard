@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ResultsArea from '../components/ResultsArea';
 import SearchBar from '../components/SearchBar';
 
-export default function Exercises() {
+export default function ExercisesList() {
 
   const [exercises, setExercises] = useState([]);
   const [result, setResult] = useState('');

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './pages/Sidebar';
-import Profile from './pages/Profile';
-import Exercises from './pages/Exercises';
+import Dashboard from './pages/Dashboard';
+import ExercisesList from './pages/ExercisesList';
 import Exercise from './pages/Exercise';
 import Calendar from './pages/Calendar';
-import AddForm from './pages/AddForm';
+import AdminPanel from './pages/AdminPanel';
 import AuthPage from './pages/AuthPage';
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
       <div className='main-window'>
         <div className='container'>
           <Routes>
-            <Route path ='/' element={<Profile />} />
-            <Route path ='/exercises' element={<Exercises />} />
+            <Route path ='/' element={<Dashboard />} />
+            <Route path ='/exercises' element={<ExercisesList />} />
             <Route path ='/exercises/:id' element={<Exercise />} />
             <Route path ='/calendar' element={<Calendar />} />
             <Route 
@@ -50,7 +50,7 @@ function App() {
             <Route 
               path='/add_form'
               element={isAuthenticated
-              ? (<AddForm />)
+              ? (<AdminPanel />)
               : (<Navigate to="/login" />)}
             />
           </Routes>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ProfileStats from '../components/ProfileStats';
+import DashboardStats from '../components/DashboardStats';
 import ProfileDashboard from '../components/ProfileDashboard';
 import WorkoutPlan from '../components/WorkoutPlan';
 
-export default function Profile() {
+export default function Dashboard() {
 
   const [records, setRecords] = useState([]);
 
@@ -23,13 +23,13 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="profile-page">
-      <h1>Информация о тренировках</h1>
-      <div className="dashboard-area card">
-        <ProfileDashboard data={records} />
-      </div>
-      <ProfileStats data={records} />
-      <WorkoutPlan />
-    </div>
-  )
+		<div className='profile-page'>
+			<h1>Информация о тренировках</h1>
+			<div className='dashboard-area card'>
+				<ProfileDashboard data={records} />
+			</div>
+			<DashboardStats data={records} />
+			<WorkoutPlan />
+		</div>
+	);
 }
