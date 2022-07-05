@@ -9,16 +9,16 @@ import lastVisit from '../img/last-visit.png';
 
 export default function DashboardStats({ records }) {
   
-  const cardioCount = records.data.filter(function(item) {
+  const cardioCount = records.filter(function(item) {
     return item.value > 1;
   });
 
-  const weightCount = records.data.filter(function(item) {
+  const weightCount = records.filter(function(item) {
     return item.value <= 1;
   });
   
-  const workoutsCounter = records.data.length;
-  const lastWorkoutDate = records.data?.sort((a, b) => a.day < b.day  ? -1 : 1).at(-1)?.day;
+  const workoutsCounter = records.length;
+  const lastWorkoutDate = records?.sort((a, b) => a.day < b.day  ? -1 : 1).at(-1)?.day;
   const progressCounter = workoutsCounter / 313 * 100;
 
   return (

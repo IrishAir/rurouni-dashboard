@@ -26,9 +26,9 @@ export default function Dashboard() {
 		<div className='profile-page'>
 			<h1>Информация о тренировках</h1>
 			<div className='dashboard-area card'>
-				<ProfileDashboard data={records} />
+				<ProfileDashboard records={records} />
 			</div>
-			<DashboardStats data={records} />
+			<DashboardStats records={records} />
 			<WorkoutPlan />
 		</div>
 	);
