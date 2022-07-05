@@ -12,7 +12,7 @@ export default function Exercise() {
   
   const getExercise = async () => {
     try {
-      const response = await fetch(`/exercises/${state}`);
+      const response = await fetch(`https://rurouni-dashboard.herokuapp.com/exercises/${state}`);
       const jsonData = await response.json();
       
       setExercise(jsonData);
