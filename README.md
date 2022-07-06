@@ -2,9 +2,7 @@
 An application made for tracking fitness progress that includes chart for every exercise, authentication and calendar heatmap.
 
 ## Demo
-Deployed on Heroku — [rurouni-dashboard](https://rurouni-dashboard.herokuapp.com/)
-
-The first time load may be long due to the free plan on Heroku (it goes 'idle' mode after 30 min of being inactive), sorry for the inconvenience 😥
+Deployed on Heroku — [rurouni](https://rurouni.herokuapp.com/)
 
 ##  General info
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/) and [Node](https://nodejs.org/en/)
