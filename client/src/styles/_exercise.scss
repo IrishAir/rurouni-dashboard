@@ -1,12 +1,7 @@
 .exercise-page {
 
-  .exercise-page-chart{
+  .exercise-page-chart {
     height: 36rem;
-
-    @media (max-width: 1366px) {
-      height: 22rem;
-      max-width: 77.5rem;
-    }
 
     .chart-tooltip {
       padding: 2rem;
@@ -17,7 +12,7 @@
       color: $font-header;
 
       p {
-        padding-bottom: 0.7rem;;
+        padding-bottom: 0.7rem;
       }
 
       span {

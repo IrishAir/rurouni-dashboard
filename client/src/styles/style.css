@@ -482,12 +482,6 @@ button:hover {
 .exercise-page .exercise-page-chart {
   height: 36rem;
 }
-@media (max-width: 1366px) {
-  .exercise-page .exercise-page-chart {
-    height: 22rem;
-    max-width: 77.5rem;
-  }
-}
 .exercise-page .exercise-page-chart .chart-tooltip {
   padding: 2rem;
   background-color: #fff;

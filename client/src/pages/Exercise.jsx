@@ -29,7 +29,7 @@ export default function Exercise() {
   const lastTrained = exercise.history?.at(-1).date;
   
   return (
-    <div className="exercise-page">
+    <div className="exercise-page  flex cols">
       <div className="flex">
         <h1>{exercise.name}</h1>
       </div>
