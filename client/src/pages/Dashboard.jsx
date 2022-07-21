@@ -25,7 +25,7 @@ export default function Dashboard() {
   return (
 		<div className='profile-page'>
 			<h1>Информация о тренировках</h1>
-			<div className='dashboard-area card'>
+			<div className='dashboard-area flex card'>
 				<ProfileDashboard records={records} />
 			</div>
 			<DashboardStats records={records} />

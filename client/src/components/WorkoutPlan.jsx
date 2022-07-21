@@ -7,8 +7,7 @@ export default function WorkoutPlan() {
   return (
     <div className="profile-workout-plan">
       <h2>Программа тренировок</h2>
-      <div className="flex jcsb">
-
+      <div className="profile-workout-plan__item  flex jcsb">
         {workoutPlan.map(item => 
           <div className="card">
             <h3 className='regular'>{item.day}</h3>
@@ -23,5 +22,5 @@ export default function WorkoutPlan() {
           )}
       </div>      
     </div>
-  )
+  );
 }

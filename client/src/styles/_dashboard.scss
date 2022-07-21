@@ -1,17 +1,24 @@
 .profile-page {
 
-  .dashboard-area{
+  .dashboard-area {
     height: 13.125rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-wrap: wrap;
+  }
 
-    @media (max-width: 1366px) {
-      max-width: 77.5rem;
-      margin-bottom: 6rem;
-    }
+  &__calendar {
+    width: 90%;
+    height: 100%;
   }
 
   .profile-workout-plan {
-    @media (max-width: 1366px) {
-      visibility: hidden;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    &__item {
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
 
     .links {
@@ -34,5 +41,15 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+@media (max-width: $screen-medium) {
+  .dashboard-area {
+    display: none;
+  }
+
+  .profile-workout-plan {
+    margin-top: 3rem;
   }
 }

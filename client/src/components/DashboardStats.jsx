@@ -22,31 +22,35 @@ export default function DashboardStats({ records }) {
   const progressCounter = workoutsCounter / 313 * 100;
 
   return (
-    <div className="jcsb flex">
-      <StatCard 
-        src={bicep} 
-        alt='Силовых тренировок' 
-        lable='Силовых тренировок'
-        title={weightCount.length}
-      />
-      <StatCard 
-        src={cardio} 
-        alt='Кардио тренировок' 
-        lable='Кардио тренировок'
-        title={cardioCount.length}
-      />
-      <StatCard 
-        src={progress} 
-        alt='Общий прогресс' 
-        lable='Общий прогресс'
-        title={`${Math.ceil(progressCounter)}%`}
-      />
-      <StatCard 
-        src={lastVisit} 
-        alt='Последнее посещение' 
-        lable='Последнее посещение'
-        title={lastWorkoutDate ? format(parseISO(lastWorkoutDate), "d MMMM yyyy", { locale: ru }) : lastWorkoutDate}
-      />
-    </div>
-  )
+		<div className='card-container jcsb flex'>
+			<StatCard
+				src={bicep}
+				alt='Силовых тренировок'
+				lable='Силовых тренировок'
+				title={weightCount.length}
+			/>
+			<StatCard
+				src={cardio}
+				alt='Кардио тренировок'
+				lable='Кардио тренировок'
+				title={cardioCount.length}
+			/>
+			<StatCard
+				src={progress}
+				alt='Общий прогресс'
+				lable='Общий прогресс'
+				title={`${Math.ceil(progressCounter)}%`}
+			/>
+			<StatCard
+				src={lastVisit}
+				alt='Последнее посещение'
+				lable='Последнее посещение'
+				title={
+					lastWorkoutDate
+						? format(parseISO(lastWorkoutDate), 'd MMMM yyyy', { locale: ru })
+						: lastWorkoutDate
+				}
+			/>
+		</div>
+	);
 }

@@ -369,17 +369,21 @@ button:hover {
 
 .profile-page .dashboard-area {
   height: 13.125rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex-wrap: wrap;
 }
-@media (max-width: 1366px) {
-  .profile-page .dashboard-area {
-    max-width: 77.5rem;
-    margin-bottom: 6rem;
-  }
+.profile-page__calendar {
+  width: 90%;
+  height: 100%;
 }
-@media (max-width: 1366px) {
-  .profile-page .profile-workout-plan {
-    visibility: hidden;
-  }
+.profile-page .profile-workout-plan {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.profile-page .profile-workout-plan__item {
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 .profile-page .profile-workout-plan .links {
   -moz-columns: 2;
@@ -400,6 +404,14 @@ button:hover {
   margin-bottom: 0;
 }
 
+@media (max-width: 1200px) {
+  .dashboard-area {
+    display: none;
+  }
+  .profile-workout-plan {
+    margin-top: 3rem;
+  }
+}
 .exercises-page h3 {
   color: #475569;
 }
