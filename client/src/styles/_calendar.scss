@@ -5,29 +5,25 @@
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: scroll;
-    height: 45rem;
+    max-height: 75vh;
 
-    @media (max-width: 1366px) {
-      height: 30rem;
-    }
+    .workout-list {
+      width: 75%;
+      color: $font-header;
 
-  .workout-list {
-    width: 50%;
-    color: $font-header;
+      &__item {
+        padding: 1.2rem 1.875rem;
+        border-radius: 12px;
+        gap: 8rem;
 
-    &__item {
-      padding: 1.2rem 1.875rem;
-      border-radius: 12px;
-      gap: 8rem;
+        @media (max-width: 1366px) {
+          gap: 1rem;
+        }
 
-      @media (max-width: 1366px) {
-        gap: 1rem;
-      }
-
-      &:nth-child(odd) {
-        background-color: $slate-row;
+        &:nth-child(odd) {
+          background-color: $slate-row;
+        }
       }
     }
   }
-}
 }

@@ -12,7 +12,7 @@ export default function CalendarList({ workoutList }) {
                 <p className='light'>{format(parseISO(item.day), "d MMMM, EEEE", { locale: ru })}</p>
               </div>
               <div className='workout-list__col'>
-                <p className='light'>{item.title}</p>
+                <p className='light workout-list__name'>{item.title}</p>
               </div>
             </div>
             )}

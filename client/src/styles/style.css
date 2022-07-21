@@ -504,15 +504,10 @@ button:hover {
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: scroll;
-  height: 45rem;
-}
-@media (max-width: 1366px) {
-  .calendar-page .calendar-block {
-    height: 30rem;
-  }
+  max-height: 75vh;
 }
 .calendar-page .calendar-block .workout-list {
-  width: 50%;
+  width: 75%;
   color: #334155;
 }
 .calendar-page .calendar-block .workout-list__item {
