@@ -20,7 +20,7 @@
   }
 
   .exercises-search-area {
-    width: 50%;
+    width: 75vw;
     margin-bottom: 2.5rem;
   }
 
@@ -43,10 +43,6 @@
     justify-content: center;
     gap: 1rem;
     overflow-y: scroll;
-    height: 37.5rem;
-
-    @media (max-width: 1366px) {
-      height: 22rem;
-    }
+    height: 65vh;
   }
 }
