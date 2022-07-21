@@ -12,7 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("https://rurouni-dashboard.herokuapp.com/login", {
+      const res = await fetch('/login', {
         method: "POST",
         headers: { jwt_token: localStorage.token }
       });
@@ -32,10 +32,9 @@ function App() {
   };
 
   return (
-    <div className='app flex'>
+    <section className='app flex'>
       <Sidebar isAuthenticated={isAuthenticated}/>
-      <div className='main-window'>
-        <div className='container'>
+      <section className='wrapper'>
           <Routes>
             <Route path ='/' element={<Dashboard />} />
             <Route path ='/exercises' element={<ExercisesList />} />
@@ -54,10 +53,8 @@ function App() {
               : (<Navigate to="/login" />)}
             />
           </Routes>
-        </div>
-      </div>
-    </div>
-
+      </section>
+    </section>
   );
 }
 
