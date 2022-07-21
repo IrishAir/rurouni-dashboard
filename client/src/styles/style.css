@@ -315,58 +315,87 @@ button:hover {
   background-image: url("../img/failure.svg");
 }
 
-.menu {
+.sidebar {
+  background-color: #334155;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.sidebar .menu {
+  width: 4.5rem;
   height: 100vh;
   align-items: center;
   justify-content: center;
   position: relative;
+  gap: 2.5rem;
 }
-.menu a {
+.sidebar .menu a {
   display: block;
   width: 30px;
   height: 30px;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  margin: 1.25rem 0;
 }
-.menu a.active {
+.sidebar .menu a.active {
   background-color: #F8FAFC;
   border-radius: 6px;
 }
-.menu__profile {
+.sidebar .menu__profile {
   background-image: url("../img/menu-profile.svg");
 }
-.menu__profile.active {
+.sidebar .menu__profile.active {
   background-image: url("../img/menu-profile-selected.svg");
 }
-.menu__exercises {
+.sidebar .menu__exercises {
   background-image: url("../img/menu-list.svg");
 }
-.menu__exercises.active {
+.sidebar .menu__exercises.active {
   background-image: url("../img/menu-list-selected.svg");
 }
-.menu__calendar {
+.sidebar .menu__calendar {
   background-image: url("../img/menu-calendar.svg");
 }
-.menu__calendar.active {
+.sidebar .menu__calendar.active {
   background-image: url("../img/menu-calendar-selected.svg");
 }
-.menu__add_form {
+.sidebar .menu__add_form {
   background-image: url("../img/menu-add.svg");
 }
-.menu__add_form.active {
+.sidebar .menu__add_form.active {
   background-image: url("../img/menu-add-selected.svg");
 }
-.menu__settings {
+.sidebar .menu__settings {
   background-image: url("../img/menu-settings.svg");
   position: absolute;
   bottom: 15px;
 }
-.menu__settings.active {
+.sidebar .menu__settings.active {
   background-image: url("../img/menu-settings-selected.svg");
 }
 
+@media (max-width: 800px) {
+  .sidebar {
+    position: relative;
+    flex-direction: row;
+    padding-top: 0;
+    height: 4.5rem;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+  }
+  .sidebar .menu {
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    height: 4.5rem;
+  }
+  .sidebar .menu__settings {
+    position: relative;
+    bottom: 0;
+  }
+}
 .profile-page .dashboard-area {
   height: 13.125rem;
   padding-left: 2rem;
