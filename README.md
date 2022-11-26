@@ -2,7 +2,7 @@
 An application made for tracking fitness progress that includes chart for every exercise, authentication and calendar heatmap.
 
 ## Demo
-Deployed on Heroku — [rurouni](https://rurouni.herokuapp.com/)
+Frontend deployed on Vercel — [rurouni](https://rurouni.vercel.app/), Backend on Railway
 
 ##  General info
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/) and [Node](https://nodejs.org/en/)
