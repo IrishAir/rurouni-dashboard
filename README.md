@@ -1,8 +1,8 @@
-# PERN Workouts Dashboard
+# PERN Workouts Dashboard - Old version
 An application made for tracking fitness progress that includes chart for every exercise, authentication and calendar heatmap.
 
 ## Demo
-Frontend deployed on Vercel — [rurouni](https://rurouni.vercel.app/), Backend on Railway
+Frontend deployed on Vercel — [rurouni](https://rurouni-old.vercel.app/), Backend on Railway
 
 ##  General info
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/) and [Node](https://nodejs.org/en/)
